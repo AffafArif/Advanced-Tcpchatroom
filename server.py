@@ -102,10 +102,10 @@ def kick_user(name):
         name_index = nicknames.index(name)
         client_to_kick = clients[name_index]
         clients.remove(client_to_kick)
-        client_to_kick.send('You were kicked by an admin!'.encode('ascii'))
+        client_to_kick.send('You were removed by an admin!'.encode('ascii'))
         client_to_kick.close()
         nicknames.remove(name)
-        broadcast(f'{name} was kicked by an admin!'.encode('ascii'))
+        broadcast(f'{name} was removed by an admin!'.encode('ascii'))
 
 print("Server is listening...")
 receive()
